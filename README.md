@@ -7,5 +7,6 @@ Add 4 new inserters:
 * Magnetic Filter Stack inserters
 * Magnetic Long Reach filter Stack inserters
 
-There are no animations which allows the inserters to work at a significan speed boost. A great companion to fast belts.
-Balanace may be adjusted. These inserter use a lot of power.
+There are no animations which allows the inserters to work at a significant speed boost. A great companion to fast belts.
+
+Balanace may need be adjusted. These inserter use a lot of power.

@@ -2,8 +2,8 @@ data:extend(
 {    
   {
     type = "inserter",
-    name = "ultra-fast-filter-inserter",
-    icon = "__UltraFastMagnecticInserter__/graphics/filter-inserter.png",
+    name = "ultra-fast-long-filter-inserter",
+    icon = "__UltraFastMagnecticInserterExtra__/graphics/long-filter-inserter.png",
     icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     stack = true,
@@ -11,7 +11,7 @@ data:extend(
     {
       hardness = 0.2,
       mining_time = 0.5,
-      result = "ultra-fast-filter-inserter"
+      result = "ultra-fast-long-filter-inserter"
     },
     max_health = 160,
     corpse = "small-remnants",
@@ -24,8 +24,8 @@ data:extend(
     },
     collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
     selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
-    pickup_position = {0, -1},
-    insert_position = {0, 1.2},
+    pickup_position = {0, -2},
+    insert_position = {0, 2.2000000000000002},
     energy_per_movement = 2000,
     energy_per_rotation = 2000,
     energy_source =
@@ -118,32 +118,15 @@ data:extend(
     },
     platform_picture = {
       sheet = {
-        filename = "__base__/graphics/entity/stack-filter-inserter/stack-filter-inserter-platform.png",
-        height = 46,
-        hr_version = {
-          filename = "__base__/graphics/entity/stack-filter-inserter/hr-stack-filter-inserter-platform.png",
-          height = 79,
-          priority = "extra-high",
-          scale = 0.5,
-          shift = {
-            0.046875,
-            0.203125
-          },
-          width = 105
-        },
+        filename = "__UltraFastMagnecticInserterExtra__/graphics/ultimate-long-filter-inserter-platform.png",
+        height = 40,
         priority = "extra-high",
         shift = {
-          0.09375,
-          0
+          0.03125,
+          0.1875
         },
-        width = 46
+        width = 53
       }
-    },
-    icon = "__base__/graphics/icons/stack-filter-inserter.png",
-    icon_size = 32,
-    insert_position = {
-      0,
-      1.2
     },
     circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
     circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,

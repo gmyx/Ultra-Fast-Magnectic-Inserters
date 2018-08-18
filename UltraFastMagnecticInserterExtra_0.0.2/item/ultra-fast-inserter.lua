@@ -2,7 +2,7 @@ data:extend({
     {
         type = "item",
         name = "ultra-fast-inserter",
-        icon = "__UltraFastMagnecticInserter__/graphics/inserter.png",
+        icon = "__UltraFastMagnecticInserterExtra__/graphics/inserter.png",
         icon_size = 32,
         flags = {"goes-to-quickbar"},
         subgroup = "inserter",
@@ -13,7 +13,7 @@ data:extend({
     {
         type = "item",
         name = "ultra-fast-long-inserter",
-        icon = "__UltraFastMagnecticInserter__/graphics/long-inserter.png",
+        icon = "__UltraFastMagnecticInserterExtra__/graphics/long-inserter.png",
         icon_size = 32,
         flags = {"goes-to-quickbar"},
         subgroup = "inserter",
@@ -24,7 +24,7 @@ data:extend({
     {
         type = "item",
         name = "ultra-fast-filter-inserter",
-        icon = "__UltraFastMagnecticInserter__/graphics/filter-inserter.png",
+        icon = "__UltraFastMagnecticInserterExtra__/graphics/filter-inserter.png",
         icon_size = 32,
         flags = {"goes-to-quickbar"},
         subgroup = "inserter",
@@ -35,7 +35,7 @@ data:extend({
     {
         type = "item",
         name = "ultra-fast-long-filter-inserter",
-        icon = "__UltraFastMagnecticInserter__/graphics/long-filter-inserter.png",
+        icon = "__UltraFastMagnecticInserterExtra__/graphics/long-filter-inserter.png",
         icon_size = 32,
         flags = {"goes-to-quickbar"},
         subgroup = "inserter",

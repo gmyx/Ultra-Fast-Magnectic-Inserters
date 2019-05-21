@@ -1,8 +1,0 @@
-{
-  "name": "UltraFastMagnecticInserterExtra",
-  "version": "0.1.0",
-  "title": "Ultra Fast Inserters",
-  "author": "gmyx",
-  "description": "A Faster collection of Stack and filter Inserters without any animations for lower CPU usage. Moves items very fast",
-  "factorio_version": "0.17"
-}

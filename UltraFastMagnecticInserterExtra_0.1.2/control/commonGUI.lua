@@ -39,7 +39,7 @@ function commonGUI:OnGuiOpened(event)
 end
 
 function commonGUI:OnGuiClosed(event)	
-	if event.gui_type == defines.gui_type.custom and event.element.name == self.boxCaption  then
+	if event.gui_type == defines.gui_type.custom and event.element ~= nil and event.element.name == self.boxCaption  then
 		self:closeGUI(event.player_index, false)	
 	end
 end
@@ -221,11 +221,34 @@ end
 
 function commonGUI:SetOverride(event)	
 	if event.created_entity and IsUFInserters(event.created_entity) then
-		--chekc if setting is set		
-		if settings.get_player_settings(game.players[event.player_index])["ufi-override-stack-size"].value == true then
-			printToScreen("setting to 1" ,event.player_index)
-			event.created_entity.inserter_stack_size_override = 
-				tonumber(settings.get_player_settings(game.players[event.player_index])["ufi-override-stack-size-value"].value)
-		end			
+		--check entity at dropoff and pickup, override ONLY if both are belts
+		local foundBeltAtPikcup = false
+		local foundBeltAtDropoff = false
+		local dropEntity = game.players[event.player_index].surface.find_entities({event.created_entity.drop_position, event.created_entity.drop_position})		
+		for i,v in ipairs(dropEntity) do 
+			printToScreen(i,event.player_index) 
+			printToScreen("dropEntity: " .. v.name .. " of type " .. v.type ,event.player_index) 
+			if v.type == "transport-belt" then
+				foundBeltAtDropoff = true
+			end
+		end
+
+		local pickupEntity = game.players[event.player_index].surface.find_entities({event.created_entity.pickup_position, event.created_entity.pickup_position})		
+		for i,v in ipairs(pickupEntity) do 
+			printToScreen(i,event.player_index) 
+			printToScreen("pickupEntity: " ..v.name .. " of type " .. v.type ,event.player_index) 
+			if v.type == "transport-belt" then
+				foundBeltAtPikcup = true
+			end
+		end
+
+		--chekc if setting is set	
+		if foundBeltAtPikcup == true and foundBeltAtDropoff == true then	
+			if settings.get_player_settings(game.players[event.player_index])["ufi-override-stack-size"].value == true then
+				printToScreen("setting to 1" ,event.player_index)
+				event.created_entity.inserter_stack_size_override = 
+					tonumber(settings.get_player_settings(game.players[event.player_index])["ufi-override-stack-size-value"].value)
+			end			
+		end
 	end
 end

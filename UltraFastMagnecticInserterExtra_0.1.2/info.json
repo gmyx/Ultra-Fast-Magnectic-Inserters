@@ -1,6 +1,6 @@
 {
   "name": "UltraFastMagnecticInserterExtra",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "title": "Ultra Fast Inserters",
   "author": "gmyx",
   "description": "A Faster collection of Stack and filter Inserters without any animations for lower CPU usage. Moves items very fast",

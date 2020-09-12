@@ -21,6 +21,16 @@ Version 0.1.1
 * Ultra Fast configurable Filter inserter
 * * Same as the configurable, but with filters
 
+Version 0.1.2
+* Bug Fix: Unhandled nil - not all closed events have an element (thanks to xPucTu4)
+* Changed the behaviour of overriding to 1 to apply ONLY if both pickup and drop off are belts.
+
+Version 0.1.3
+* Bug Fix: Error in migration script if comming for original mod
+* Seriously neerfed the power needed for the inserters
+** When form 48MW to 267KW (double stack inserters) with a drain of 1000
+** Configurable take more at 365kW with a drain of 2500
+
 There are no animations which allows the inserters to work at a significant speed boost. A great companion to fast belts.
 
 Balance may need be adjusted. These inserter use a lot of power. Some of the graphics are a little off but the difference is minor.

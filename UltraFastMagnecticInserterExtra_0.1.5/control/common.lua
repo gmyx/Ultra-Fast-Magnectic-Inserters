@@ -15,9 +15,9 @@ end
 
 function toDropoffPostion(value, positive)
 	--convert a lane value to a position value
-	--math is simple - lane /2 + 0.2 
+	--math is simple - lane /2 + 0.2
 	--using floor on lane to get right value
-	return math.floor(value) / 2 + 0.2	
+	return math.floor(value) / 2 + 0.2
 end
 
 function toPickupLane(value)
@@ -32,7 +32,7 @@ end
 
 function printToScreen(log, player_index)
 	if DEBUG == true then
-		game.get_player(player_index).print(log)	
+		game.get_player(player_index).print(log)
 	end
 end
 
@@ -59,7 +59,7 @@ function validateNumber(element, player_index)
 			--yup, its an int, final check, between 1 and max
 			if value > 0 and value <= getStackOverrideDefault(player_index) + 1 then
 				--valid!
-				if element then element.style = "number_input_textbox" end
+				if element then element.style = "very_short_number_textfield" end
 				return true
 			else
 				--out of range!!!
